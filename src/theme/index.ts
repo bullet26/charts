@@ -1,4 +1,7 @@
 import { DefaultTheme, createGlobalStyle } from 'styled-components'
+import '@fontsource/metropolis' // Defaults to weight 400
+import '@fontsource/metropolis/400.css' // Specify weight
+import '@fontsource/metropolis/400-italic.css' // Specify weight and style
 
 export const theme: DefaultTheme = {
   colors: {
@@ -7,7 +10,9 @@ export const theme: DefaultTheme = {
     bgColor: '#111216',
     iconBgColor: '#191C23',
     text: '#FFFFFF',
+    textAdditionl: '#A2A4A8',
     border: '#60677A',
+    tableSettings: '#76b2ea',
   },
 }
 
@@ -16,5 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Metropolis", sans-serif;
+    user-select: none;
   }
 `

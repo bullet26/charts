@@ -1,17 +1,17 @@
 import { ThemeProvider } from 'styled-components'
-import { ToggleButton, Checkbox, IconWrapper, Button } from 'UI'
-import { Icon } from 'assets'
+import { Provider } from 'react-redux'
 import { theme, GlobalStyle } from 'theme'
+import { DashboardPage } from 'pages'
+import { store } from 'store/store'
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <ToggleButton labelText="circle" />
-      <Checkbox mode="circle" />
-      <IconWrapper mode="avatar" icon={<Icon.User />} color="#F4A732" />
-      <Button>Log in</Button>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <DashboardPage />
+      </ThemeProvider>
+    </Provider>
   )
 }
 

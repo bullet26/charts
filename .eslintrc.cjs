@@ -34,5 +34,6 @@ module.exports = {
     'no-console': 0,
     'no-nested-ternary': 0,
     'no-plusplus': 0,
+    'import/no-extraneous-dependencies': 0,
   },
 }

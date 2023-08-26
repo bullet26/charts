@@ -5,19 +5,24 @@ export const Wrapper = styled.div<WrapperProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   width: 48px;
   height: 48px;
   ${(props) => {
     switch (props.mode) {
       case 'circle':
         return css`
+          cursor: pointer;
           border-radius: 50%;
           background-color: ${props.theme.colors.iconBgColor};
+          & > svg {
+            stroke: #7d869e;
+            fill: #7d869e;
+          }
           &&:hover {
             background-color: ${props.theme.colors.secondColor};
-            & > svg rect {
-              stroke: white;
+            & > svg {
+              stroke: #fff;
+              fill: #fff;
             }
           }
         `
@@ -30,17 +35,19 @@ export const Wrapper = styled.div<WrapperProps>`
           &&:hover {
             background-color: ${props.theme.colors.secondColor};
           }
-          & > svg rect {
-            stroke: white;
+          & > svg {
+            stroke: #fff;
+            fill: #fff;
           }
         `
       default:
         return css`
           border-radius: 8px;
-          background-color: ${props.color}26; // rrggbbaa
+          background-color: ${props.bgcolor};
 
-          & > svg rect {
-            stroke: ${props.color};
+          & > svg {
+            stroke: ${props.iconcolor};
+            fill: ${props.iconcolor};
           }
         `
     }
