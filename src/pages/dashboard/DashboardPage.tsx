@@ -19,7 +19,7 @@ const DashboardPage: FC = () => {
             <Header />
             <ChartWrapper>
               <StatisticCardList {...data.statistic} />
-              <SalesTable {...data.general_sales_time} />
+              <SalesTable {...data.general_sales_time[0]} />
             </ChartWrapper>
           </Wrapper>
         </Layout>

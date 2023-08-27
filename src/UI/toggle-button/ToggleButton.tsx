@@ -3,14 +3,15 @@ import { CheckboxWrapper, Circle, Switch, Input, LabelText } from './ToggleButto
 import { ToggleButtonProps } from './type'
 
 const ToggleButton: FC<ToggleButtonProps> = (props) => {
-  const { labelText } = props
+  const { labelText, checked, onClick, id } = props
+
   return (
     <CheckboxWrapper>
-      <Input />
+      <Input checked={checked} onChange={() => onClick(id)} />
       <Switch>
         <Circle />
       </Switch>
-      <LabelText>{labelText}</LabelText>
+      {!!labelText && <LabelText>{labelText}</LabelText>}
     </CheckboxWrapper>
   )
 }

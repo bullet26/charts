@@ -1,3 +1,6 @@
 export interface ToggleButtonProps {
-  labelText: string
+  labelText?: string
+  id: string
+  checked?: boolean
+  onClick: (id: string) => void
 }

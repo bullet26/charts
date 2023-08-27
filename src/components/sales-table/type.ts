@@ -13,3 +13,17 @@ export interface SalesTableProps {
     name: string
   }
 }
+
+export interface SettingsTableStyled {
+  $isActive: boolean
+}
+
+export interface SettngsTableProps {
+  showColumns: { [x: string]: boolean }
+  handleShowColumns: (key: string) => void
+}
+
+export interface TableProps {
+  data: SalesTableProps
+  showColumns: { [x: string]: boolean }
+}

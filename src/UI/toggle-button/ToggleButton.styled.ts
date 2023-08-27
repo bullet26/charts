@@ -13,7 +13,7 @@ export const Switch = styled.div`
   border-radius: 88px;
   position: relative;
   cursor: pointer;
-  background-color: ${(props) => props.theme.colors.secondColor};
+  background-color: ${(props) => props.theme.colors.border};
   padding: 0 3px;
 `
 
@@ -30,8 +30,11 @@ export const Circle = styled.div`
 
 export const Input = styled.input.attrs({ type: 'checkbox' })`
   display: none;
+  &:checked ~ ${Switch} {
+    background-color: ${(props) => props.theme.colors.secondColor};
+  }
   &:checked ~ ${Switch} ${Circle} {
-    left: 18px;
+    left: 13px;
   }
 `
 export const LabelText = styled.span`

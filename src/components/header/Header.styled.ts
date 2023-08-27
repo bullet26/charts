@@ -4,7 +4,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 18px;
+  column-gap: 15px;
   width: 100%;
 `
 

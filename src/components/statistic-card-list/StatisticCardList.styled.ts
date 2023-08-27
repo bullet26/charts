@@ -19,12 +19,11 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 3px;
+  row-gap: 5px;
 `
 
 export const Number = styled.div`
   font-size: 44px;
-  line-height: 0.9;
   color: ${(props) => props.theme.colors.text};
 `
 export const Subtitle = styled.div`
