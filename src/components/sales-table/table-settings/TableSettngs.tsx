@@ -7,8 +7,8 @@ import {
   SettngsTableRow,
   SettngsTableWrapper,
 } from './TableSettngs.styled'
-import { titles } from './utils'
-import { SettngsTableProps } from './type'
+import { titles } from '../utils'
+import { SettngsTableProps } from '../type'
 
 const TableSettngs: FC<SettngsTableProps> = (props) => {
   const { showColumns, handleShowColumns } = props

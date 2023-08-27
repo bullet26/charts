@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { SettingsTableStyled } from './type'
+import { SettingsTableStyled } from '../type'
 
 export const SettngsTitle = styled.div<SettingsTableStyled>`
   display: flex;

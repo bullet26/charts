@@ -13,6 +13,7 @@ export const theme: DefaultTheme = {
     textAdditionl: '#A2A4A8',
     border: '#60677A',
     tableSettings: '#76b2ea',
+    inputColor: '#7D7F8E',
   },
 }
 

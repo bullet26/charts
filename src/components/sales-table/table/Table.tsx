@@ -7,9 +7,10 @@ import {
   TableGrid,
   TableModelWrpper,
   TableImg,
-} from './SalesTable.styled'
-import { SalesTableProps, TableProps } from './type'
-import { titles, makeArray } from './utils'
+  AnimatedfadeIn,
+} from './Table.styled'
+import { SalesTableProps, TableProps } from '../type'
+import { titles, makeArray } from '../utils'
 
 const Table: FC<TableProps> = (props) => {
   const { data, showColumns } = props
@@ -41,18 +42,20 @@ const Table: FC<TableProps> = (props) => {
     })
 
   return (
-    <TableGrid count={count}>
-      {Object.entries(titles).map(
-        ([key, value]) =>
-          showColumns[key] && (
-            <TableHeaderItem key={key} id={key} count={count}>
-              {value}
-            </TableHeaderItem>
-          ),
-      )}
+    <AnimatedfadeIn>
+      <TableGrid count={count}>
+        {Object.entries(titles).map(
+          ([key, value]) =>
+            showColumns[key] && (
+              <TableHeaderItem key={key} id={key} count={count}>
+                {value}
+              </TableHeaderItem>
+            ),
+        )}
 
-      {makeArray(5).map((i) => rows(i))}
-    </TableGrid>
+        {makeArray(5).map((i) => rows(i))}
+      </TableGrid>
+    </AnimatedfadeIn>
   )
 }
 
