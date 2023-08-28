@@ -8,6 +8,7 @@ export const ButtonCustom = styled.button`
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
   &&: hover {
     background-color: transparent;
     border: 1px solid ${(props) => props.theme.colors.secondColor};

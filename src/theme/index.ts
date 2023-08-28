@@ -11,6 +11,8 @@ export const theme: DefaultTheme = {
     iconBgColor: '#191C23',
     text: '#FFFFFF',
     textAdditionl: '#A2A4A8',
+    formSubtitleColor: '#9496A6',
+    linkColor: '#78B4ED',
     border: '#60677A',
     tableSettings: '#76b2ea',
     inputColor: '#7D7F8E',

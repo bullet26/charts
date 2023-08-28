@@ -5,6 +5,7 @@ export const SalesTableWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  background-color: ${(props) => props.theme.colors.primaryColor};
 `
 export const Header = styled.div`
   display: flex;

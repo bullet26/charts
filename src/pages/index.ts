@@ -1,1 +1,5 @@
 export { DashboardPage } from './dashboard'
+export { LoginPage } from './login'
+export { SignupPage } from './signup'
+export { MainPage } from './main'
+export { OrdinaryPage } from './ordinary'

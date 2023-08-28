@@ -10,6 +10,26 @@ export const TableGrid = styled.div<{ count: number }>`
   column-gap: 60px;
   row-gap: 32px;
   grid-auto-flow: row;
+
+  // enter from
+  &.fade-enter {
+    opacity: 0;
+  }
+
+  // enter to
+  &.fade-enter-active {
+    opacity: 1;
+  }
+
+  // exit from
+  &.fade-exit {
+    opacity: 1;
+  }
+
+  // exit to
+  &.fade-exit-active {
+    opacity: 0;
+  }
 `
 
 export const TableModelWrpper = styled.div`

@@ -1,15 +1,18 @@
 import { ThemeProvider } from 'styled-components'
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 import { theme, GlobalStyle } from 'theme'
-import { DashboardPage } from 'pages'
-import { store } from 'store/store'
+import { Router } from 'routes'
+import { store } from 'store'
 
 function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <DashboardPage />
+        <BrowserRouter>
+          <GlobalStyle />
+          <Router />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   )

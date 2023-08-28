@@ -13,10 +13,12 @@ export const Wrapper = styled.div<WrapperProps>`
         return css`
           cursor: pointer;
           border-radius: 50%;
-          background-color: ${props.theme.colors.iconBgColor};
+          background-color: ${props.$active
+            ? props.theme.colors.secondColor
+            : props.theme.colors.iconBgColor};
           & > svg {
-            stroke: #7d869e;
-            fill: #7d869e;
+            stroke: ${props.$active ? '#fff' : '#7d869e;'};
+            fill: ${props.$active ? '#fff' : '#7d869e;'};
           }
           &&:hover {
             background-color: ${props.theme.colors.secondColor};

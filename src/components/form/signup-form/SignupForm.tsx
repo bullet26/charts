@@ -1,28 +1,16 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import { Formik, FormikHelpers } from 'formik'
-import { useLoginMutation } from 'store/api'
-import { useNavigate } from 'react-router-dom'
+import { useRegistrationMutation } from 'store/api'
 import { Input, Button } from 'UI'
-import { useAppSelector } from 'utils/redux.hooks'
-import { UserInfoLogin } from '../type'
+import { UserInfoSignUp } from '../type'
 import { initialValues, validationSchema } from './utils'
 import { Wrapper, Title, Subtitle, Text, FormWrapper, InputWrapper, LinkText } from '../Form.styled'
 
-const LoginForm: FC = () => {
-  const [login, { isError }] = useLoginMutation()
+const SignupForm: FC = () => {
+  const [registration, { isSuccess, isError }] = useRegistrationMutation()
 
-  const isAuthUser = useAppSelector((state) => state.user.isAuth)
-
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (isAuthUser) {
-      navigate('/dashboard')
-    }
-  }, [isAuthUser, navigate])
-
-  const handleSubmit = (values: UserInfoLogin, { resetForm }: FormikHelpers<UserInfoLogin>) => {
-    login(values)
+  const handleSubmit = (values: UserInfoSignUp, { resetForm }: FormikHelpers<UserInfoSignUp>) => {
+    registration(values)
     resetForm()
   }
 
@@ -39,15 +27,17 @@ const LoginForm: FC = () => {
           </Text>
           <FormWrapper>
             <InputWrapper>
+              <Input label="Name" id="name" name="name" type="text" />
               <Input label="Email" id="email" name="email" type="email" />
               <Input label="Password" id="password" name="password" type="password" />
             </InputWrapper>
-            <Button type="submit">Log in</Button>
+            <Button type="submit">Create account</Button>
           </FormWrapper>
           <Subtitle>
             Or
-            <LinkText to="/">Sign up</LinkText>
+            <LinkText to="/login">Log in</LinkText>
           </Subtitle>
+          {isSuccess && <Subtitle>User succesfully created</Subtitle>}
           {isError && <Subtitle>Something went wrong</Subtitle>}
         </Wrapper>
       )}
@@ -55,4 +45,4 @@ const LoginForm: FC = () => {
   )
 }
 
-export default LoginForm
+export default SignupForm
