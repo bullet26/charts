@@ -6,4 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   font-size: 72px;
   color: lightgreen;
+  width: 100vw;
+  height: 100vh;
 `

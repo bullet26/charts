@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { useGetChartsDataQuery } from 'store/api'
-import { Header, StatisticCardList, SalesTable } from 'components'
+import { Header, StatisticCardList, SalesTable, Chart, Diagram } from 'components'
 import { Loader, ErrorMsg } from 'UI'
-import { Wrapper, ChartWrapper } from './DashboardPage.styled'
+import { Wrapper, DashboardWrapper, ChartWrapper } from './DashboardPage.styled'
 
 const DashboardPage: FC = () => {
   const { data = [], isLoading, isSuccess, isError } = useGetChartsDataQuery('')
@@ -14,10 +14,14 @@ const DashboardPage: FC = () => {
       {isSuccess && (
         <Wrapper>
           <Header />
-          <ChartWrapper>
+          <DashboardWrapper>
             <StatisticCardList {...data.statistic} />
+            <ChartWrapper>
+              <Chart />
+              <Diagram />
+            </ChartWrapper>
             <SalesTable {...data.general_sales_time[0]} />
-          </ChartWrapper>
+          </DashboardWrapper>
         </Wrapper>
       )}
     </>

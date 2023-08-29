@@ -32,12 +32,18 @@ export const CustomCheck = styled.div<CheckboxProps>`
           border: 2px solid ${props.theme.colors.border};
           border-radius: 2px;
           ${Input}:checked + && {
-            border: 2px solid ${props.theme.colors.secondColor};
+            border: 2px solid
+              ${props.$bgcolor
+                ? props.theme.colors[props.$bgcolor]
+                : props.theme.colors.secondColor};
             & > ${CustomTick} {
-              background-color: ${props.theme.colors.secondColor};
+              background-color: ${props.$bgcolor
+                ? props.theme.colors[props.$bgcolor]
+                : props.theme.colors.secondColor};
             }
           }
         `
+
       case 'circle':
         return css`
           border: 2px solid ${props.theme.colors.border};

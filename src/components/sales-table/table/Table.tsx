@@ -1,6 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 import { FC, useState, useEffect } from 'react'
 import { tableDefaultImg } from 'assets'
+import { makeArray } from 'utils'
 import {
   TableHeaderItem,
   TableRowItem,
@@ -9,7 +10,7 @@ import {
   TableImg,
 } from './Table.styled'
 import { SalesTableProps, TableProps } from '../type'
-import { titles, makeArray } from '../utils'
+import { titles } from '../utils'
 
 const Table: FC<TableProps> = (props) => {
   const { data, showColumns } = props

@@ -5,9 +5,17 @@ export const Wrapper = styled.div`
   padding: 16px 48px 28px 32px;
 `
 
-export const ChartWrapper = styled.div`
+export const DashboardWrapper = styled.div`
   width: 100%;
   margin-top: 43px;
-  disply: flex;
+  display: flex;
+  flex-direction: column;
   row-gap: 16px;
+`
+export const ChartWrapper = styled.div`
+  width: 100%;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 74.5% 24.5%;
+  column-gap: 16px;
 `

@@ -14,11 +14,16 @@ export const theme: DefaultTheme = {
     formSubtitleColor: '#9496A6',
     linkColor: '#78B4ED',
     border: '#60677A',
+    hoverTable: '#31343D',
     tableSettings: '#76b2ea',
     inputColor: '#7D7F8E',
+    diagramBlue: '#18A0FB',
+    diagramGreen: '#3CDC86',
+    diagramRed: '#ED2D95',
+    diagramOrange: '#F4A732',
+    diagramViolet: '#9B53F8',
   },
 }
-
 export const GlobalStyle = createGlobalStyle`
   body {   
     padding: 0;

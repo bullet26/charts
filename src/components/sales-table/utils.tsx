@@ -15,11 +15,3 @@ export const titles = {
 const arrofObj = Object.keys(titles).map((item) => [item, true])
 
 export const showColumnsInintialState = Object.fromEntries(arrofObj)
-
-export const makeArray = (limit: number) => {
-  const arr = []
-  for (let i = 0; i < limit; i++) {
-    arr.push(i)
-  }
-  return arr
-}
