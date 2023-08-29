@@ -10,6 +10,7 @@ export const titles = {
   rating: 'Rating',
   status: 'Status',
   price: 'Price',
+  option: 'Option',
 }
 
 const arrofObj = Object.keys(titles).map((item) => [item, true])

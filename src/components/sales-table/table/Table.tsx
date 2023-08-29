@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import { FC, useState, useEffect } from 'react'
-import { tableDefaultImg } from 'assets'
+import { tableDefaultImg, Icon } from 'assets'
 import { makeArray } from 'utils'
 import {
   TableHeaderItem,
@@ -35,9 +35,17 @@ const Table: FC<TableProps> = (props) => {
           </TableModelWrpper>
         )
       }
+      if (key === 'option') {
+        return (
+          <TableRowItem key={i + i}>
+            <Icon.ActionMenu />
+          </TableRowItem>
+        )
+      }
       if (typeof value !== 'object') {
         return <TableRowItem key={key + i + 100}>{value}</TableRowItem>
       }
+
       return null
     })
 

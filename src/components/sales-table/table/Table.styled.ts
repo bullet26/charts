@@ -7,7 +7,7 @@ export const TableGrid = styled.div<{ count: number }>`
     `
   }}
   display: grid;
-  column-gap: 60px;
+  /* column-gap: 60px; */
   row-gap: 32px;
   grid-auto-flow: row;
 
@@ -43,8 +43,7 @@ export const TableHeaderItem = styled.div<{ count: number }>`
   color: ${(props) => props.theme.colors.textAdditionl};
   display: flex;
 
-  justify-content: ${(props) => (props.count > 9 ? 'flex-start' : 'center')};
-  flex-start;
+  justify-content: ${(props) => (props.count > 10 ? 'flex-start' : 'center')};
   align-items: center;
 `
 
