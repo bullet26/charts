@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getCookie } from 'utils/getCookie'
+import { getCookie } from 'utils'
 
 const initialState = {
   isAuth: false || getCookie('isAuth'),

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-interface IconWrapperPropsWithoutOnClick {
+export interface IconWrapperProps {
   $active?: boolean
   id?: string
   activeIcon?: string
@@ -8,15 +8,7 @@ interface IconWrapperPropsWithoutOnClick {
   mode: 'square' | 'circle' | 'avatar'
   bgcolor?: string
   iconcolor?: string
+  onClick?: (id: string) => void
 }
-
-type IconWrapperPropsWithRequiredClick = IconWrapperPropsWithoutOnClick & {
-  mode: 'circle'
-  onClick: (id: string) => void
-}
-
-export type IconWrapperProps =
-  | (Exclude<IconWrapperPropsWithoutOnClick, { mode: 'square' }> & { mode: 'circle' | 'avatar' })
-  | IconWrapperPropsWithRequiredClick
 
 export type WrapperProps = Omit<IconWrapperProps, 'icon'>

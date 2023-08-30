@@ -5,6 +5,7 @@ import { StatisticProps } from './type'
 import { CardListWrapper } from './StatisticCardList.styled'
 
 const CardList: FC<StatisticProps> = (props) => {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { iam_users, iam_roles, iam_policies, compute_resources, games } = props
 
   return (
